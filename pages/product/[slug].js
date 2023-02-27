@@ -192,7 +192,7 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
 
               <p className="leading-relaxed">{product.desc}</p>
               <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5">
-                <div className="flex">
+                {/* <div className="flex">
                   <span className="mr-3">Color</span>
                   {Object.keys(variants).includes("red") &&
                     Object.keys(variants["red"]).includes(size) && (
@@ -227,8 +227,8 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                         }`}
                       ></button>
                     )}
-                </div>
-                <div className="flex ml-6 items-center">
+                </div> */}
+                {/* <div className="flex ml-6 items-center">
                   <span className="mr-3">Size</span>
                   <div className="relative">
                     <select
@@ -253,7 +253,7 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                       {color && Object.keys(variants[color]).includes("XXL") && (
                         <option value={"XXL"}>XXL</option>
                       )}
-                    </select>
+                  </select>
                     <span className="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
                       <svg
                         fill="none"
@@ -268,9 +268,9 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                       </svg>
                     </span>
                   </div>
-                </div>
+                </div> */}
               </div>
-              <div className="flex">
+              {/* <div className="flex">
                 {product.availableQty > 0 && (
                   <span className="title-font font-medium text-xl text-blue-500">
                     ₹{product.price}
@@ -280,8 +280,8 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                   <span className="title-font font-medium text-xl text-blue-500">
                     Out of stock!
                   </span>
-                )}
-                <button
+                )} */}
+                {/* <button
                   disabled={product.availableQty <= 0}
                   onClick={() => {
                     addToCart(
@@ -296,8 +296,8 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                   className="flex disabled:bg-blue-300 ml-8 text-Brown bg-blue-500 border-0 py-2 px-2 md:px-3 focus:outline-none hover:bg-blue-600 rounded"
                 >
                   Add to Cart
-                </button>
-                <button
+                </button> */}
+                {/* <button
                   disabled={product.availableQty <= 0}
                   onClick={() => {
                     buyNow(slug, 1, product.price, product.title, size, color);
@@ -305,7 +305,7 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                   className="flex disabled:bg-blue-300 ml-3 text-Brown bg-blue-500 border-0 py-2 px-2 md:px-3 focus:outline-none hover:bg-blue-600 rounded"
                 >
                   Buy Now
-                </button>
+                </button> */}
                 {/* <button className="rounded-full w-10 h-10 bg-blue-500 p-0 border-0 inline-flex items-center justify-center text-Brown ml-4">
                   <svg
                     fill="currentColor"
@@ -318,8 +318,8 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                     <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
                   </svg>
                 </button> */}
-              </div>
-              <div className="pin mt-6 flex space-x-2 text-sm">
+              {/* </div> */}
+              {/* <div className="pin mt-6 flex space-x-2 text-sm">
                 <input
                   onChange={onChangePin}
                   type="text"
@@ -332,17 +332,17 @@ const Post = ({ buyNow, addToCart, product, variants, error }) => {
                 >
                   Check
                 </button>
-              </div>
-              {!service && service != null && (
+              </div> */}
+              {/* {!service && service != null && (
                 <div className="text-red-700 text-sm mt-3">
                   Sorry! we do not deliver to this pincode yet
                 </div>
-              )}
-              {service && service != null && (
+              )} */}
+              {/* {service && service != null && (
                 <div className="text-red-700 text-sm mt-3">
                   Yay! This pincode is serviceable
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

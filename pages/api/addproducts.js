@@ -11,10 +11,10 @@ const handler = async (req, res) => {
         desc: req.body[i].desc,
         img: req.body[i].img,
         category: req.body[i].category,
-        size: req.body[i].size,
-        color: req.body[i].color,
-        price: req.body[i].price,
-        availableQty: req.body[i].availableQty,
+        // size: req.body[i].size,
+        // color: req.body[i].color,
+        // price: req.body[i].price,
+        // availableQty: req.body[i].availableQty,
       });
       await p.save();
     }
