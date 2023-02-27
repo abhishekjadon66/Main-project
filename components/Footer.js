@@ -1,168 +1,194 @@
-import Link from "next/link";
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 const Footer = () => {
   return (
-    <div>
-      <footer className="text-gray-600 body-font">
-        <div className="container px-5 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
-          <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
-            <Link
-              href={"/"}
-              className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900"
-            >
-              <img src="/logo.png" alt="" />
-            </Link>
-
-            <p className="mt-2 text-sm text-gray-500">
-            Ecommerce the &lt;code/&gt; - Premium Coding tshirts, hoodies, and apparals     </p>
+    <>
+      <footer className="bg-gradient-to-r from-[#241B35] to-[#8956F1]  text-[#F2F2F2] lg:text-left">
+        <div className="flex items-center justify-center border-b-2 border-neutral-200 p-6 dark:border-neutral-500 lg:justify-between">
+          <div className="mr-12 hidden lg:block">
+            <span>Get connected with us on social networks:</span>
           </div>
-          <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                SHOP
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <Link href={'/tshirts'} className="text-gray-600 hover:text-gray-800">T-Shirts</Link>
-                </li>
-                <li>
-                  <Link href={"/hoodies"} className="text-gray-600 hover:text-gray-800">
-                  Hoodies
-                  </Link>
-                </li>
-                <li>
-                  <Link href={'/mug'} className="text-gray-600 hover:text-gray-800">Mug</Link>
-                </li>
-                <li>
-                  <Link href={"/stickers"} className="text-gray-600 hover:text-gray-800">Stickers</Link>
-                </li>
-                <li>
-                  <Link href={'/shoes'} className="text-gray-600 hover:text-gray-800">Hoodies</Link>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                CUSTOMER SERVICE
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">About</a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Contact us
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Return policy
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font font-medium text-gray-900 tracking-widest text-sm mb-3">
-                POLICY
-              </h2>
-              <nav className="list-none mb-10">
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a className="text-gray-600 hover:text-gray-800">
-                    Terms & Condition
-                  </a>
-                </li>
-              </nav>
-            </div>
-            <div className="lg:w-1/4 md:w-1/2 w-full px-4">
-              <h2 className="title-font text-gray-900 tracking-widest text-sm mb-3 font-bold">
-                WE ACCEPT
-              </h2>
-              <div className="list-none mb-10">
-                <div>online payment</div>
-              </div>
-            </div>
+          <div className="flex justify-center">
+            <Link
+              href="/"
+              className="mr-6 text-neutral-600 dark:text-neutral-200"
+            ></Link>
+            <Link
+              href="/"
+              className="mr-6 text-neutral-600 dark:text-neutral-200"
+            ></Link>
+            <Link
+              href="/"
+              className="mr-6 text-neutral-600 dark:text-neutral-200"
+            ></Link>
+            <Link
+              href="/"
+              className="mr-6 text-neutral-600 dark:text-neutral-200"
+            ></Link>
+            <Link
+              href="/"
+              className="mr-6 text-neutral-600 dark:text-neutral-200"
+            ></Link>
+            <Link href="/" className="text-neutral-600 dark:text-neutral-200"></Link>
           </div>
         </div>
-        <div className="bg-gray-100">
-          <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-            <p className="text-gray-500 text-sm text-center sm:text-left">
-              © 2023 Ecommerce —
-              <a
-                href="https://twitter.com/knyttneve"
-                rel="noopener noreferrer"
-                className="text-gray-600 ml-1"
-                target="_blank"
+        <div className="mx-6 py-10 text-center md:text-left">
+          <div className="grid-1 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <div className="">
+              <Link
+                href="/"
+                className="mb-4 flex items-center justify-center font-bold uppercase md:justify-start"
               >
-                @Abhishek jadon
-              </a>
-            </p>
-            <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
-              <a className="text-gray-500">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
+                <img id="img1" className="h-36" src="/c.png" alt="" />
+              </Link>
+              <p>
+                Here you can use rows and columns to organize your footer
+                content. Lorem ipsum dolor sit amet, consectetur adipisicing
+                elit.
+              </p>
+            </div>
+            <div className="">
+              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                Website
+              </h6>
+              <p className="mb-4">
+                <Link
+                  href="/blog"
+                  className="text-neutral-600 dark:text-neutral-200"
                 >
-                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
-                <svg
-                  fill="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
+                  Blog
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link
+                  href="/career"
+                  className="text-neutral-600 dark:text-neutral-200"
                 >
-                  <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
-                <svg
-                  fill="none"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
+                  Career
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link
+                  href="/services"
+                  className="text-neutral-600 dark:text-neutral-200"
                 >
-                  <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
-                  <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37zm1.5-4.87h.01"></path>
-                </svg>
-              </a>
-              <a className="ml-3 text-gray-500">
-                <svg
-                  fill="currentColor"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="0"
-                  className="w-5 h-5"
-                  viewBox="0 0 24 24"
+                  Services
+                </Link>
+              </p>
+              <p>
+                <Link
+                  href="/statistics"
+                  className="text-neutral-600 dark:text-neutral-200"
                 >
-                  <path
-                    stroke="none"
-                    d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"
-                  ></path>
-                  <circle cx="4" cy="4" r="2" stroke="none"></circle>
-                </svg>
-              </a>
-            </span>
-          </div>
+                  Statistics
+                </Link>
+              </p>
+            </div>
+            <div className="">
+              <h6 className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+                Useful links
+              </h6>
+              <p className="mb-4">
+                <Link
+                  href="/webdevelopment"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
+                  Web Delopement
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link
+                  href="/appdevelopment"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
+                  App Development
+                </Link>
+              </p>
+              <p className="mb-4">
+                <Link
+                  href="/graphics"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
+                  Graphics Designer
+                </Link>
+              </p>
+              <p>
+                <Link
+                  href="/thesis"
+                  className="text-neutral-600 dark:text-neutral-200"
+                >
+                  Thesis Writing
+                </Link>
+              </p>
+            </div>
+            <div>
+        <h6
+          className="mb-4 flex justify-center font-semibold uppercase md:justify-start">
+          Contact
+        </h6>
+        <p className="mb-4 flex items-center justify-center md:justify-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="mr-3 h-5 w-5">
+            <path
+              d="M11.47 3.84a.75.75 0 011.06 0l8.69 8.69a.75.75 0 101.06-1.06l-8.689-8.69a2.25 2.25 0 00-3.182 0l-8.69 8.69a.75.75 0 001.061 1.06l8.69-8.69z" />
+            <path
+              d="M12 5.432l8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 01-.75-.75v-4.5a.75.75 0 00-.75-.75h-3a.75.75 0 00-.75.75V21a.75.75 0 01-.75.75H5.625a1.875 1.875 0 01-1.875-1.875v-6.198a2.29 2.29 0 00.091-.086L12 5.43z" />
+          </svg>
+          Gwalior(M.P.), New vivek nagar
+        </p>
+        <p className="mb-4 flex items-center justify-center md:justify-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="mr-3 h-5 w-5">
+            <path
+              d="M1.5 8.67v8.58a3 3 0 003 3h15a3 3 0 003-3V8.67l-8.928 5.493a3 3 0 01-3.144 0L1.5 8.67z" />
+            <path
+              d="M22.5 6.908V6.75a3 3 0 00-3-3h-15a3 3 0 00-3 3v.158l9.714 5.978a1.5 1.5 0 001.572 0L22.5 6.908z" />
+          </svg>
+           abhishekjadon
+        </p>
+        <p className="mb-4 flex items-center justify-center md:justify-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="mr-3 h-5 w-5">
+            <path
+              fillRule="evenodd"
+              d="M1.5 4.5a3 3 0 013-3h1.372c.86 0 1.61.586 1.819 1.42l1.105 4.423a1.875 1.875 0 01-.694 1.955l-1.293.97c-.135.101-.164.249-.126.352a11.285 11.285 0 006.697 6.697c.103.038.25.009.352-.126l.97-1.293a1.875 1.875 0 011.955-.694l4.423 1.105c.834.209 1.42.959 1.42 1.82V19.5a3 3 0 01-3 3h-2.25C8.552 22.5 1.5 15.448 1.5 6.75V4.5z"
+              clipRule="evenodd" />
+          </svg>
+          + 91 7354893164
+        </p>
+        <p className="flex items-center justify-center md:justify-start">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="currentColor"
+            className="mr-3 h-5 w-5">
+            <path
+              fillRule="evenodd"
+              d="M7.875 1.5C6.839 1.5 6 2.34 6 3.375v2.99c-.426.053-.851.11-1.274.174-1.454.218-2.476 1.483-2.476 2.917v6.294a3 3 0 003 3h.27l-.155 1.705A1.875 1.875 0 007.232 22.5h9.536a1.875 1.875 0 001.867-2.045l-.155-1.705h.27a3 3 0 003-3V9.456c0-1.434-1.022-2.7-2.476-2.917A48.716 48.716 0 0018 6.366V3.375c0-1.036-.84-1.875-1.875-1.875h-8.25zM16.5 6.205v-2.83A.375.375 0 0016.125 3h-8.25a.375.375 0 00-.375.375v2.83a49.353 49.353 0 019 0zm-.217 8.265c.178.018.317.16.333.337l.526 5.784a.375.375 0 01-.374.409H7.232a.375.375 0 01-.374-.409l.526-5.784a.373.373 0 01.333-.337 41.741 41.741 0 018.566 0zm.967-3.97a.75.75 0 01.75-.75h.008a.75.75 0 01.75.75v.008a.75.75 0 01-.75.75H18a.75.75 0 01-.75-.75V10.5zM15 9.75a.75.75 0 00-.75.75v.008c0 .414.336.75.75.75h.008a.75.75 0 00.75-.75V10.5a.75.75 0 00-.75-.75H15z"
+              clipRule="evenodd" />
+          </svg>
+          + 91 7354893164
+        </p>
+      </div>
+    </div>
+  </div>
+        <div className="bg-[#020102] p-2 text-center space-x-2">
+          <span> &copy; 2023 Copyright:</span>
+          <Link className="text-[#8956F1] font-bold text-xl" href="/">
+            Cognicode
+          </Link>
         </div>
       </footer>
-    </div>
+    </>
   );
 };
 

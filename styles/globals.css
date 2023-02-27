@@ -1,16 +1,53 @@
-.fade-anim img {
-  animation: fadeAnim 0.5s, ease-out;
-}
-
-@keyframes fadeAnim {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Mynerve&family=Roboto+Slab:wght@200;400&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Slab", serif;
+}
+
+#img {
+  height: 80px;
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translatex(10px);
+  }
+  100% {
+    transform: translatex(-20px);
+  }
+}
+@keyframes up-down {
+  0% {
+    transform: translatex(10px);
+  }
+  100% {
+    transform: translatex(-20px);
+  }
+}
+#img1 {
+  height: 100px;
+  animation: footer 2s ease-in-out infinite alternate-reverse both;
+}
+@-webkit-keyframes footer {
+  0% {
+    transform: translatey(10px);
+  }
+  100% {
+    transform: translatey(-20px);
+  }
+}
+@keyframes footer {
+  0% {
+    transform: translatey(10px);
+  }
+  100% {
+    transform: translatey(-20px);
+  }
+}
