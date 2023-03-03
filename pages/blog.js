@@ -30,9 +30,9 @@ const Blog = ({ products }) => {
                       Blog
                     </h3>
                     <h2 className="text-gray-900 title-font text-lg font-medium">
-                      {products[item].title}
+                      {products[item].title.substr(0,20)}...
                     </h2>
-                    <p className="mt-1">{products[item].desc}</p>
+                    <p className="mt-1">{products[item].desc.substr(0,150)}..</p>  
                   </div>
                 </div>
               );
@@ -54,14 +54,10 @@ export async function getServerSideProps(context) {
   for (let item of products) {
     if (item.title in Blog) {
       if (
-        !Blog[item.title].color.includes(item.color) &&
-        item.availableQty > 0
-      ) {
-        Blog[item.title].color.push(item.color);
-      }
+        !Blog[item.title]
+      )
       if (
-        !Blog[item.title].size.includes(item.size) &&
-        item.availableQty > 0
+        !Blog[item.title]
       ) {
         Blog[item.title].size.push(item.size);
       }

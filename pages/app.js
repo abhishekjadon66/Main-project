@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Product from "../models/Product";
 import mongoose from "mongoose";
-const About = ({ products }) => {
+const App = ({ products }) => {
   return (
     <div>
       <section className="text-gray-600 body-font">
@@ -27,7 +27,7 @@ const About = ({ products }) => {
                   </Link>
                   <div className="mt-4 text-center">
                     <h3 className="text-gray-500 text-xs tracking-widest title-font mb-1">
-                      About
+                      App
                     </h3>
                     <h2 className="text-gray-900 title-font text-lg font-medium">
                       {products[item].title}
@@ -82,38 +82,38 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI);
   }
 
-  let products = await Product.find({ category: "about" });
-  let about = {};
+  let products = await Product.find({ category: "App" });
+  let App = {};
   for (let item of products) {
-    if (item.title in about) {
+    if (item.title in App) {
       if (
-        !about[item.title].color.includes(item.color) &&
+        !App[item.title].color.includes(item.color) &&
         item.availableQty > 0
       ) {
-        about[item.title].color.push(item.color);
+        App[item.title].color.push(item.color);
       }
       if (
-        !about[item.title].size.includes(item.size) &&
+        !App[item.title].size.includes(item.size) &&
         item.availableQty > 0
       ) {
-        about[item.title].size.push(item.size);
+        App[item.title].size.push(item.size);
       }
     } else {
-      about[item.title] = JSON.parse(JSON.stringify(item));
+      App[item.title] = JSON.parse(JSON.stringify(item));
       if (item.availableQty > 0) {
-        about[item.title].color = [item.color];
-        about[item.title].size = [item.size];
+        App[item.title].color = [item.color];
+        App[item.title].size = [item.size];
       }
       else {
-          about[item.title].color = [];
-          about[item.title].size = [];
+          App[item.title].color = [];
+          App[item.title].size = [];
       }
     }
   }
 
   return {
-    props: { products: JSON.parse(JSON.stringify(about)) },
+    props: { products: JSON.parse(JSON.stringify(App)) },
   };
 }
 
-export default About;
+export default App;

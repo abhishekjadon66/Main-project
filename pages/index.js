@@ -269,7 +269,7 @@ export default function Home({ blogs }) {
                   />
                 </div>
               </div>
-              <Link href="/android" className="text-center">
+              <Link href="/app" className="text-center">
                 <h3 className="pt-8 text-lg font-semibold uppercase text-primary group-hover:text-yellow lg:text-xl">
                   Android & IOS Development
                 </h3>

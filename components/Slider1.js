@@ -47,12 +47,11 @@ const Imageslide = () => {
 
   return (
     <div>
-      {" "}
       <div ref={slideRef} className="w-full select-none relative my-2">
         <div className="aspect-w-16 aspect-auto">
           <img
             src={imageSlide[currentIndex]}
-            alt=""
+            alt="Error"
             className="w-full h-[500px]"
           />
         </div>

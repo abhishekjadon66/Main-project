@@ -6,7 +6,7 @@ import Script from "next/script";
 import Link from "next/link";
 import "react-toastify/dist/ReactToastify.css";
 import { toast, ToastContainer } from "react-toastify";
-const checkout = ({ cart, clearCart, subTotal, addToCart, removeFromCart }) => {
+const Checkout = ({ cart, clearCart, subTotal, addToCart, removeFromCart }) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
@@ -328,7 +328,7 @@ const checkout = ({ cart, clearCart, subTotal, addToCart, removeFromCart }) => {
         </ol>
       </div>
       <div className="mx-8">
-        <Link href={"/checkout"}>
+        <Link href={"/Checkout"}>
           <button
             disabled={disabled}
             onClick={initiatePayment}
@@ -343,4 +343,4 @@ const checkout = ({ cart, clearCart, subTotal, addToCart, removeFromCart }) => {
   );
 };
 
-export default checkout;
+export default Checkout;
