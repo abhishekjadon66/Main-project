@@ -4,7 +4,7 @@ import { ThemeProvider } from "@mui/material/styles";
 import FullLayout from "../../src/layouts/FullLayout";
 import { Grid, Stack, TextField, Button } from "@mui/material";
 import BaseCard from "../../src/components/baseCard/BaseCard";
-const Add = () => {
+const Add = (products) => {
   const [form, setForm] = useState({});
   const onChange = (e) => {
     setForm({
@@ -13,9 +13,14 @@ const Add = () => {
     });
   };
 
-  const submitForm = (e) => {
+  const submitForm = async(e) => {
     e.preventDefault()
     // Fetch API Request to addd a product
+    const res = await fetch(`${process.env.NEXT_PUBLIC_HOST}/api/addproducts`, {
+            method: 'POST',
+            body: {},
+    });
+    const data = await res.json();
     
 
   }
@@ -28,7 +33,7 @@ const Add = () => {
               <Stack spacing={3}>
                 <TextField onChange={onChange}
                   value={form.title ?form.title : ""}
-                  name="title"
+                  name={products.name}
                   label="Title"
                   variant="outlined"
                 />
@@ -78,5 +83,12 @@ const Add = () => {
     </ThemeProvider>
   );
 };
+export async function getServerSideProps(context) {
+  return {
+    props: {}, // will be passed to the page component as props
+  }
+}
+
 
 export default Add;
+

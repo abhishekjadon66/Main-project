@@ -30,42 +30,9 @@ const Web = ({ products }) => {
                       Web
                     </h3>
                     <h2 className="text-gray-900 title-font text-lg font-medium">
-                      {products[item].title}
+                      {products[item].title.substr(0, 30)}...
                     </h2>
-                    <p className="mt-1">{products[item].desc}</p>
-                    {/* <div className="mt-1">
-                      {products[item].size.includes("s") && 
-                        <span className="border px-1 mx-1 border-blue-200">
-                          S,
-                        </span>
-            }|
-                      {products[item].size.includes("m") && 
-                        <span className="border px-1 mx-1 border-blue-200">
-                          M,
-                        </span>
-                      }
-                      {products[item].size.includes("L") && 
-                        <span className="border px-1 mx-1 border-blue-200">
-                          L,
-                        </span>
-                      }
-                      {products[item].size.includes("XL") && 
-                        <span className="border px-1 mx-1 border-blue-200">
-                          XL,
-                        </span>
-                    }
-                      {products[item].size.includes("XXL") && 
-                        <span className="border px-1 mx-1 border-blue-200">
-                          XXL,
-                        </span>
-                      }
-                    </div> */}
-                    {/* <div className="mt-1">
-                      {products[item].color.includes('Brown') && <button className="border-2 border-blue-400 ml-1 rounded-full w-6 h-6 focus:outline-none"></button>}
-                      {products[item].color.includes('Brown') && <button className="border-2 border-blue-400 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                      {products[item].color.includes('Brown') && <button className="border-2 border-blue-400 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                      {products[item].color.includes('Brown') && <button className="border-2 border-blue-400 ml-1 bg-blue-700 rounded-full w-6 h-6 focus:outline-none"></button>}
-                    </div> */}
+                    <p className="mt-1">{products[item].desc.substr(0, 100)}...</p>
                   </div>
                 </div>
               );
@@ -82,7 +49,7 @@ export async function getServerSideProps(context) {
     await mongoose.connect(process.env.MONGO_URI);
   }
 
-  let products = await Product.find({ category: "Web" });
+  let products = await Product.find({ category: "web" });
   let Web = {};
   for (let item of products) {
     if (item.title in Web) {

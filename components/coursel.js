@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
-const Coursel = () => {
+const Slider = () => {
   const slides = [
     {
       url: "https://media.istockphoto.com/id/1369269456/photo/data-technology-computer-generated-digital-currency-and-exchange-stock-chart-for-finance-and.jpg?b=1&s=170667a&w=0&k=20&c=tmNEA23imoVX7-uAKgnr-l4LIpA5uyolTTS10sccq0Y=",
@@ -65,4 +65,4 @@ const Coursel = () => {
   );
 };
 
-export default Coursel;
+export default Slider;

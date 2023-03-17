@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import Product from "../models/Product";
 import mongoose from "mongoose";
-const About = ({ products }) => {
+const Products = ({ products }) => {
   return (
     <div>
       <section className="text-gray-600 body-font">

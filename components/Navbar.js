@@ -43,9 +43,6 @@ const Navbar = ({
             <Link href={"/services"}>
               <li className="hover:text-white">Services</li>
             </Link>
-            <Link href={"/statistics"}>
-              <li className="hover:text-white">Statistics</li>
-            </Link>
             <Link href={"/contact"}>
               <li className="hover:text-white">Contact</li>
             </Link>
